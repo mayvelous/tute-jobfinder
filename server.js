@@ -19,7 +19,8 @@ app.get('*', function(req, res){
     res.render('index');
 });
 
-mongoose.connect('mongodb://localhost/tute-jobfinder');
+//mongoose.connect('mongodb://localhost/tute-jobfinder');
+mongoose.connect('mongodb://dbjf:dbjf@ds047050.mongolab.com:47050/tute-jobfinder');
 
 var con = mongoose.connection;
 con.once('open', function(){
